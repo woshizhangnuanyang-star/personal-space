@@ -1,0 +1,20 @@
+/* Shared resilience improvements for the original project layouts. */
+.page-card { margin: 0; opacity: 1; transform: none; }
+.page-card img { height: auto; }
+.detail-meta dd { overflow-wrap: anywhere; line-height: 1.75; }
+.gallery-wrap, .project-video-section { scroll-margin-top: 10rem; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.topbar a { min-height: 4.4rem; }
+@media (max-width: 900px) {
+  .hero { padding-top: 15rem !important; }
+  .gallery-wrap, .project-video-section { scroll-margin-top: 14rem; }
+  .grain { display: none; }
+  .orb, .hero::before, .hero::after { animation: none !important; }
+  .page-card:hover { transform: none; }
+  .page-card { border-radius: 1.4rem; box-shadow: 0 12px 36px rgba(16,16,16,.08); }
+  .project-video-card video { object-fit: contain; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
